@@ -9,42 +9,24 @@ class PreTraitement() :
         #pass
         self.annotations = {}
         self.annotationsFiles = [
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\call.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\dislike.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\fist.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\four.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\like.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\mute.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\ok.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\palm.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\one.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\peace.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\peace_inverted.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\rock.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\stop.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\stop_inverted.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\three.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\three2.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\two_up.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\ann_subsample\\two_up_inverted.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\call.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\dislike.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\fist.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\four.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\like.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\mute.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\ok.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\palm.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\one.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\peace.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\peace_inverted.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\rock.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\stop.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\stop_inverted.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\three.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\three2.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\two_up.json",
-            "C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\annotations\\sample\\two_up_inverted.json"
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\call.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\dislike.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\fist.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\four.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\like.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\mute.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\ok.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\palm.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\one.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\peace.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\peace_inverted.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\rock.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\stop.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\stop_inverted.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\three.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\three2.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\two_up.json",
+            "C:\\DATA\\DEV\\TIPE\\HaGR\\annotations\\sample\\two_up_inverted.json",
         ]
         self.filtered_name = {}
         self.diff_class=["call","dislike", "fist", "four", "like", "mute", "ok","palm","one","peace","peace_inverted","rock","stop","stop_inverted","three","three2","two_up","two_up_inverted"]
@@ -53,14 +35,14 @@ class PreTraitement() :
         
     def generate_dict(self) : 
         # test si le fichier existe déja et l'utilise si c'est le cas
-        if os.path.isfile("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\dict_name.json") and os.access("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\dict_name.json", os.R_OK):
-            self.annotations = MyUtils.read_json("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\dict_name.json")
+        if os.path.isfile("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\dict_name.json") and os.access("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\dict_name.json", os.R_OK):
+            self.annotations = MyUtils.read_json("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\dict_name.json")
         else:
             # genère le dictionnaire pour le stocker sous le format json
             dict = {}
             for source in self.annotationsFiles:
                 dict.update(MyUtils.read_json(source))
-            MyUtils.write_json("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\dict_name.json",dict)
+            MyUtils.write_json("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\dict_name.json",dict)
             self.annotations = dict
     
     def get_landmarks(self,id) :
@@ -99,19 +81,16 @@ class PreTraitement() :
     def distance_reseau(self, id ) :
         '''retourne la distance entre les points repères selectionnées et le barycentre
         '''
-        largeur_image = 1080
-        hauteur_image = 1920
         
         landmarks = self.get_landmarks(id)
         if len(landmarks)!= 21 :
             pass
         else :
-            box = self.annotations[id]["bboxes"][2:]
-            box = [box[0]*largeur_image, box[1]*hauteur_image] # donne la taille de la box
+            box = self.annotations[id]["bboxes"]
             
             for k in range(21): # normalise les coordonnées par rapport a la box
-                landmarks[k][0] = landmarks[k][0]*(largeur_image/box[0])
-                landmarks[k][1] = landmarks[k][1]*hauteur_image/box[1]
+                landmarks[k][0] = (landmarks[k][0]-box[0])/box[2]
+                landmarks[k][1] = (landmarks[k][1]-box[1])/box[3]
             
             #ensemble_points = [ landmarks[k] for k in range(2,21,2) ] # correspond aux phallanges 2,4,6,8,10,12,14,16,18,20 : voir le site de mediapipe
             ensemble_points = [ landmarks[k] for k in range(21)]
@@ -120,8 +99,8 @@ class PreTraitement() :
     
     def filter_name(self) :
         # verifie si le fichier existe et l'utilise dans ce cas 
-        if os.path.isfile("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\filtered_name.json") and os.access("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\filtered_name.json", os.R_OK):
-            self.filtered_name = MyUtils.read_json("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\filtered_name.json")
+        if os.path.isfile("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\filtered_name.json") and os.access("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\filtered_name.json", os.R_OK):
+            self.filtered_name = MyUtils.read_json("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\filtered_name.json")
 
         else:
             # réecrie le fichier et le stocke sous le format json
@@ -129,7 +108,7 @@ class PreTraitement() :
                 if self.annotations[x]['user_id'] not in self.filtered_name : self.filtered_name[self.annotations[x]["user_id"]]=[x]
                 else :
                     self.filtered_name[self.annotations[x]["user_id"]].append(x)
-            MyUtils.write_json("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\filtered_name.json",self.filtered_name)
+            MyUtils.write_json("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\filtered_name.json",self.filtered_name)
               
     def return_batch(self,num_batch) : 
         batch = []
@@ -144,7 +123,7 @@ class PreTraitement() :
                 elif k>=(num_batch+1)*100:
                     break
                 k+=1        
-        MyUtils.write_json("C:\\Users\\cleme\\OneDrive\\Documents\\TIPE\\Dev_NN\\logs\\batch" + str(num_batch)+ ".json",batch)
+        MyUtils.write_json("C:\\DATA\\DEV\\TIPE\\HaGR\\logs\\batch" + str(num_batch)+ ".json",batch)
         return batch
     
     def create_dic_class(self) :
@@ -198,9 +177,9 @@ class PreTraitement() :
                 y_train.append([label])
         return (np.array(x_train),np.array(y_train))
     
-preT = PreTraitement() # instantiate trainigObject
-preT.generate_dict() # prepare training data (aggregate training data grouped by imageId)
-print(preT.get_labels("f2333d37-be88-468f-91ad-45be69625002"))
+#preT = PreTraitement() # instantiate trainigObject
+#preT.generate_dict() # prepare training data (aggregate training data grouped by imageId)
+#print(preT.get_labels("f2333d37-be88-468f-91ad-45be69625002"))
 #print(len(preT.annotations))
 #preT.filter_name() # prepare training data (aggregate training data grouped by userId, in order to create random gesture batches)
 #preT.create_dic_class() # annotation class label -> vector
