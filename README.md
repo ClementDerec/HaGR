@@ -39,10 +39,10 @@ Stratégie:
         "bboxes": // liste des rectangles autour des mains détectées
         [
             [
-                0.48116749,		// Top left X position, relative image coordinate, vXib0 = Xb01/Wi
-                0.2571216,		// Top left Y position, relative image coordinate, vYib0 = Yb01/Hi
-                0.19981102,		// width, relative image coordinate, vHib0 = Wb01/Wi
-                0.10427412		// heigh, relative image coordinate, vWib0 = Hb01/Hi
+                0.48116749,		// Top left X position, relative image coordinate, vXib0 = Xb0/Wi
+                0.2571216,		// Top left Y position, relative image coordinate, vYib0 = Yb0/Hi
+                0.19981102,		// width, relative image coordinate, vWib0 = Wb01/Wi
+                0.10427412		// heigh, relative image coordinate, vHib0 = Hb01/Hi
             ]
         ],
         "labels":
@@ -53,8 +53,8 @@ Stratégie:
         [
             [	
                 [ 	// point repère 0
-                    0.6117590754152344, // X position, relative image coordinate, vXil0 = Xl01/Wi
-                    0.34647556464205115	// Y position, relative image coordinate, vYil0 = Yl01/Hi
+                    0.6117590754152344, // X position, relative image coordinate, vXil0 = Xl0/Wi
+                    0.34647556464205115	// Y position, relative image coordinate, vYil0 = Yl0/Hi
                 ],
 				...
                 [	// point repère 20 
@@ -69,10 +69,16 @@ Stratégie:
 	}
 
 
-	Valeurs recherchée vXbl0 = (Xl01 - Xb01)/Wb01 ('v'aleur de 'X' relative à la taille de la 'b'oxe et non de l'imagepoint repère, du 'l'andmark 0)
-		Or Wb01 = vHib0 * Wi
-		Donc vXbl0 = (Xl01 - Xb01)/(vHib0 * Wi) = (Xl01/Wi - Xb01/Wi) * 1/vHib0
-		Or Xl01/Wi - Xb01/Wi =  vXil0 - vXib0
-		Donc vXbl0 = (Xl01/Wi - Xb01/Wi) * 1/vHib0 = (vXil0 - vXib0) * 1/vHib0 = (0.6117590754152344 - 0.48116749) * (1/0.19981102) = 0,653575491
+	Valeurs recherchée vXbl0 = (Xl0 - Xb0)/Wb0 ('v'aleur de 'X' relative à la taille de la 'b'oxe et non de l'imagepoint repère, du 'l'andmark 0)
+		Or Wb0 = vWib0 * Wi
+		Donc vXbl0 = (Xl0 - Xb0)/(vWib0 * Wi) = (Xl0/Wi - Xb0/Wi) * 1/vWib0
+        Or Xl01/Wi - Xb01/Wi =  vXil0 - vXib0
 
+        D'où :
+            vXbl0 = (vXil0 - vXib0)/vWib0
 
+		
+		 exemple : (0.6117590754152344 - 0.48116749) * (1/0.19981102) = 0,653575491
+
+    On trouve donc :
+        vYbl0 = (vYil0 - vYib0) / vHib0
