@@ -1,0 +1,3 @@
+Type,Taux de mutation ( en % ),Taux d'élitisme (en %),Fitness
+Brut,16,11,0.9998
+Filtré (quintic),13.929292929292929,2.212121212121212,1.0961757621750146

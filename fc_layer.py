@@ -25,3 +25,5 @@ class FCLayer(Layer):
         self.weights -= learning_rate * weights_error
         self.bias -= learning_rate * output_error
         return input_error
+    
+    

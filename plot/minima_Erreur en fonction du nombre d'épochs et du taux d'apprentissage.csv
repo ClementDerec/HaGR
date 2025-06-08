@@ -1,0 +1,3 @@
+Type,Epochs,Taux d'apprentissage (en %),Erreur
+Brut,24.0,0.001,0.0031011761766552314
+Filtré (quintic),23.636363636363637,0.001,-0.0004206359241637611

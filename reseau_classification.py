@@ -21,7 +21,7 @@ def get_landmarks(img):
     landmarks = detection_result.hand_landmarks[0]
     
     return(landmarks)
-print(get_landmarks(img))
+
     
 # met en forme les données pour le réseau de neurones
 # calcul du barycentre  
@@ -85,7 +85,7 @@ def last_gradient ( y,delta,i,j, gradient , predicted_values,real_values ) :
     delta[j] = (2/n)*(predicted_values[j]-real_values[j])*(1-y[j]**2)
     gradient[i][j] = y[i]*delta[j]
 
-#print(distance_reseau(get_landmarks(img)))
+
 
 
 def softmax(X) :
