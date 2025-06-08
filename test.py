@@ -1,7 +1,7 @@
 from utils import MyUtils
 from algo_gen_fully_corrected import net_gen
-from pre_traitement import PreTraitement
-from plot import Plot
+from Data.pre_traitement import PreTraitement
+from Tools.plot import Plot
 
 preT = PreTraitement()
 preT.generate_dict()

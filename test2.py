@@ -1,5 +1,5 @@
 
-from plot import Plot
+from Tools.plot import Plot
 import numpy as np
 
 def fit_try ():

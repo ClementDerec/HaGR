@@ -1,4 +1,4 @@
-from layer import Layer
+from RNN.layer import Layer
 
 # hérite de la classe layer
 class ActivationLayer(Layer):

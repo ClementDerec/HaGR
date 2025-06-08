@@ -1,7 +1,7 @@
 import numpy as np
 
 from network import Network
-from fc_layer import FCLayer
+from RNN.fc_layer import FCLayer
 from activation_layer import ActivationLayer
 from activations import tanh, tanh_derivee
 from losses import mse, mse_derivee

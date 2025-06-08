@@ -1,4 +1,4 @@
-from layer import Layer
+from RNN.layer import Layer
 import numpy as np
 
 # herite de la classe layer 

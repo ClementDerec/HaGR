@@ -1,12 +1,12 @@
 import numpy as np
 from network import Network
-from fc_layer import FCLayer
+from RNN.fc_layer import FCLayer
 from activation_layer import ActivationLayer
 from activations import tanh, tanh_derivee,relu,relu_derivee, sigmoid,sigmoid_derivee, softmax, softmax_derivee
 from losses import mse, mse_derivee, cross_entropy, cross_entropy_derivee
-from pre_traitement import PreTraitement
+from Data.pre_traitement import PreTraitement
 from utils import MyUtils
-from plot import Plot
+from Tools.plot import Plot
 import losses
 preT = PreTraitement()
 
